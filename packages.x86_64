@@ -76,6 +76,7 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
+nano
 bluez
 bluez-utils
 networkmanager

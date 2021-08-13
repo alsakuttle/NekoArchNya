@@ -1,0 +1,21 @@
+########################################################
+name: Build CI
+
+on:
+  pull_request:
+    paths-ignore:
+      - '*.md'
+########################################################
+jobs:
+  build:
+    runs-on: ArchLinux
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Updating Packages
+    - run: sudo pacman -Syyyu
+
+    - name: Starting Build
+    - run: sudo chmod +x build.sh
+    - run: sudo ./build.sh -L "AI_$(date +%Y%m)" -V icelinux -P "IceLinux ,https://github.com/NekoIceTeam/IceLinux>" -A "IceLinux Live/Rescue CD" -v
+########################################################

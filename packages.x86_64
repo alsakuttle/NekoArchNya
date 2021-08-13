@@ -84,3 +84,5 @@ network-manager-applet
 xorg 
 xorg-server
 xfce4
+firefox
+libreoffice-fresh

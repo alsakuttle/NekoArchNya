@@ -15,7 +15,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build IceLinux 
         run: |
-          sudo pacman -Syyyu
-          sudo chmod +x build.sh
-          sudo ./build.sh -L "AI_$(date +%Y%m)" -V icelinux -P "IceLinux ,https://github.com/NekoIceTeam/IceLinux>" -A "IceLinux Live/Rescue CD" -v
+          mkarchiso -v -o ~/.work /usr/share/archiso/configs/releng
 ########################################################

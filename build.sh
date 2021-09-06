@@ -3,6 +3,6 @@
 
 sudo pacman -Syyyu
 sudo pacman -S archiso --noconfirm
-# STILL IN PROGRESS
+mkarchiso -v -w ./work -o ./out ./
 
 # Copyright (c) 2021 NekoIceCream

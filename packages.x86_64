@@ -35,7 +35,6 @@ f2fs-tools
 fatresize
 fsarchiver
 gnu-netcat
-gnome
 gpart
 gpm
 gptfdisk
@@ -144,8 +143,6 @@ xfsprogs
 xf86-video-amdgpu
 xf86-video-intel
 xl2tpd
-xorg
-xorg-server
 yarn
 yarn-cpp
 zsh

@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034
 
 iso_name="icelinux"
-iso_label="AIL_$(date +%Y%m)"
+iso_label="ICELINUX_$(date +%Y%m)"
 iso_publisher="IceLinux <https://github.com/NekoIceTeam/IceLinux>"
 iso_application="Ice Linux Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"

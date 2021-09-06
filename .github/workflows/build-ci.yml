@@ -15,5 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build IceLinux 
         run: |
-          mkarchiso -v -o ~/.work /usr/share/archiso/configs/releng
+          chmod +x build.sh
+          sudo ./build.sh
 ########################################################

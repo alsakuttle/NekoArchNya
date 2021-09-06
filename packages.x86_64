@@ -30,7 +30,6 @@ efibootmgr
 espeakup
 ethtool
 exfatprogs
-extra-xmake-modules
 f2fs-tools
 fatresize
 fsarchiver
@@ -50,11 +49,7 @@ iwd
 jfsutils
 kconfig
 kcoreaddons
-kil8n
 kparts
-kpcore
-kpservice
-kpwidgetsaddons
 kitty-terminfo
 less
 lftp
@@ -105,7 +100,6 @@ qt5-location
 qt5-svg
 qt5-xmlpatterns
 qt5-tools
-qt5-translation
 qt5-webengine
 reflector
 reiserfsprogs

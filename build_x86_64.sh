@@ -3,6 +3,6 @@
 
 sudo pacman -Syyyu
 sudo pacman -S archiso --noconfirm
-mkarchiso -v -w ./work -o ./out ./
+mkarchiso -v -w ./work -o ./iso ./icelinux_x86_64
 
 # Copyright (c) 2021 NekoIceCream

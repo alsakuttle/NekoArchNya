@@ -72,6 +72,7 @@ ntfs-3g
 nvme-cli
 openconnect
 openssh
+openvpn
 partclone
 parted
 partimage

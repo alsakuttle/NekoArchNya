@@ -13,6 +13,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build IceLinux For x86_64
         run: |
-          chmod +x build_86_64.sh
+          chmod +x build_x86_64.sh
           sudo ./build_x86_64.sh
+      
+      - name: Upload IceLinux x86_64 Iso
+        uses: actions/upload-artifact@v2
+        with: 
+            name: IceLinux x86_64
+            pach: iso/*.iso
 ########################################################

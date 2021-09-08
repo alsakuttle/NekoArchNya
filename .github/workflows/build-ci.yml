@@ -20,5 +20,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
             name: IceLinux x86_64
-            pach: iso/*.iso
+            path: iso/*.iso
 ########################################################

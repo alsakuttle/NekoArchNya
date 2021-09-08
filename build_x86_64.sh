@@ -20,7 +20,7 @@ echo "- Need good Internet Connection"
 echo ""
 echo "Starting Building..."
 echo "Ctrl + For Cancel"
-sleep 4
+sleep 10
 
 sudo pacman -Syyyu
 sudo pacman -S archiso --noconfirm

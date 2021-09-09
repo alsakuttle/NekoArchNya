@@ -58,6 +58,6 @@ jobs:
             if-no-files-found: igrone #warn #error
 ##########################################################################
       - name: Cleaning Actions Build Work
-      - run: |
+        run: |
           sudo rm -r icelinux_x86_64/iso icelinux_x86_64/work icelinux_x86/iso icelinux_x86/work icelinux_aarch64/iso icelinux_aarch64/work icelinux_aarch32/iso icelinux_aarch32/work
 ##########################################################################

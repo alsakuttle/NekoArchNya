@@ -25,6 +25,6 @@ sleep 10
 sudo pacman -Syyyu --noconfirm
 sudo pacman -S archiso --noconfirm
 sudo mkdir icelinux_x86_64/iso icelinux_x86_64/work
-mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w icelinux_x86_64/work -o icelinux_x86_64/iso icelinux_x86_64/
-
+# mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w icelinux_x86_64/work -o icelinux_x86_64/iso icelinux_x86_64/
+mkarchiso -v -w icecream_x86_64/work -o icelinux_x86_64/iso icelinux_x86_64/
 # Copyright (c) 2021 NekoIceCream

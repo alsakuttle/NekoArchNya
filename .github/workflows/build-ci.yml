@@ -42,19 +42,19 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
             path: icelinux_x86/iso/*.iso
-            if-no-files-found: igrone #warn #error
+            if-no-files-found: ignore #error #warn
 ##########################################################################
       - name: Upload Ice Linux Aarch64 Iso
         uses: actions/upload-artifact@v2
         with: 
             path: icelinux_aarch64/iso/*.iso
-            if-no-files-found: igrone #warn #error
+            if-no-files-found: ignore #warn #error
 ##########################################################################
       - name: Upload Ice Linux Aarch32 Iso
         uses: actions/upload-artifact@v2
         with: 
             path: icelinux_aarch32/iso/*.iso
-            if-no-files-found: igrone #warn #error
+            if-no-files-found: ignore #warn #error
 ##########################################################################
       - name: Cleaning Actions Build Work
         run: |

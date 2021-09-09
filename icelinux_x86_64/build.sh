@@ -24,6 +24,6 @@ sleep 10
 
 sudo pacman -Syyyu --noconfirm
 sudo pacman -S archiso --noconfirm
-mkarchiso -v -w work/ -o iso/ icelinux_x86_64/
+mkarchiso -v -w icelinux_x86_64/work/ -o icelinux_x86_64/iso/ icelinux_x86_64/
 
 # Copyright (c) 2021 NekoIceCream

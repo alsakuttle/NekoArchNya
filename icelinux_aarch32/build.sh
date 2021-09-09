@@ -5,7 +5,7 @@ clear
 echo "==================================="
 echo "       IceLinux Build Script       "
 echo "==================================="
-echo "- Arch : x86_64"
+echo "- Arch : Aarch32"
 echo "- Building Date : $(date +%Y.%m.%d)"
 echo "- Script Version : v1.0"
 echo ""
@@ -21,9 +21,8 @@ echo ""
 echo "Starting Building..."
 echo "Ctrl + For Cancel"
 sleep 10
-
-sudo pacman -Syyyu
-sudo pacman -S archiso --noconfirm
-mkarchiso -v -w ./work -o ./iso ./icelinux_x86_64
-
+echo ""
+echo "Ice Linux Aarch32 Not Available For Now"
+echo "Stopping Building..."
+sleep 2
 # Copyright (c) 2021 NekoIceCream

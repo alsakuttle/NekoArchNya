@@ -1,4 +1,4 @@
-#####################################################
+##########################################################################
 name: Build CI
 
 on:
@@ -11,14 +11,56 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build IceLinux For x86_64
+
+##########################################################################
+      - name: Build Ice Linux For x86_64
         run: |
-          chmod +x build_x86_64.sh
-          sudo ./build_x86_64.sh
+          chmod +x icelinux_x86_64/build.sh
+          sudo icelinux_x86_64/build.sh
       
-      - name: Upload IceLinux x86_64 Iso
+      - name: Upload Ice Linux x86_64 Iso
         uses: actions/upload-artifact@v2
         with: 
-            name: IceLinux x86_64
-            path: iso/*.iso
-########################################################
+            path: icelinux_x86_64/iso/*.iso
+            if-no-files-found: error #igrone #warn 
+##########################################################################
+      -  name: Build Ice Linux For x86
+         run: | 
+           chmod +x icelinux_x86/build.sh
+           sudo icelinux_x86/build.sh
+
+      - name: Upload Ice Linux x86 Iso
+        uses: actions/upload-artifact@v2
+        with: 
+            path: icelinux_x86/iso/*.iso
+            if-no-files-found: igrone #warn #error
+##########################################################################
+      -  name: Build Ice Linux For Aarch64
+         run: | 
+           chmod +x icelinux_aarch64/build.sh
+           sudo icelinux_aarch64/build.sh
+
+      - name: Upload Ice Linux Aarch64 Iso
+        uses: actions/upload-artifact@v2
+        with: 
+            path: icelinux_aarch64/iso/*.iso
+            if-no-files-found: igrone #warn #error
+##########################################################################
+      -  name: Build Ice Linux For Aarch32
+         run: | 
+           chmod +x icelinux_aarch32/build.sh
+           sudo icelinux_aarch32/build.sh
+
+      - name: Upload Ice Linux Aarch32 Iso
+        uses: actions/upload-artifact@v2
+        with: 
+            path: icelinux_aarch32/iso/*.iso
+            if-no-files-found: igrone #warn #error
+##########################################################################
+      - name: Cleaning Actions Build Work
+      - run: |
+          sudo rm -r icelinux_x86_64/iso icelinux_x86_64/work
+          sudo rm -r icelinux_x86/iso icelinux_x86/work
+          sudo rm -r icelinux_aarch64/iso icelinux_aarch64/work
+          sudo rm -r icelinux_aarch32/iso icelinux_aarch64/work
+##########################################################################

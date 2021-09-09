@@ -84,6 +84,7 @@ pv
 qemu-guest-agent
 reflector
 reiserfsprogs
+resolv
 rp-pppoe
 rsync
 rxvt-unicode-terminfo

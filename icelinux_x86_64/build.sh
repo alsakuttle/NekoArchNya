@@ -24,6 +24,6 @@ sleep 10
 
 sudo pacman -Syyyu --noconfirm
 sudo pacman -S archiso --noconfirm
-mkarchiso -v -w ./work -o ./iso ./
+mkarchiso -v -w work/ -o iso/ .
 
 # Copyright (c) 2021 NekoIceCream

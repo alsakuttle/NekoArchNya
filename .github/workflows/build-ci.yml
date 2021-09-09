@@ -34,32 +34,29 @@ jobs:
 ##########################################################################
       - name: Upload Ice Linux x86_64 Iso
         uses: actions/upload-artifact@v2
-        with: 
+        with:
+            name: IceLinux-x86_64
             path: icelinux_x86_64/iso/*.iso
             if-no-files-found: warn #error #igrone  
 ##########################################################################
       - name: Upload Ice Linux x86 Iso
         uses: actions/upload-artifact@v2
         with: 
+            name: IceLinux-x86
             path: icelinux_x86/iso/*.iso
             if-no-files-found: ignore #error #warn
 ##########################################################################
       - name: Upload Ice Linux Aarch64 Iso
         uses: actions/upload-artifact@v2
         with: 
+            name: IceLinux-Aarch64
             path: icelinux_aarch64/iso/*.iso
             if-no-files-found: ignore #warn #error
 ##########################################################################
       - name: Upload Ice Linux Aarch32 Iso
         uses: actions/upload-artifact@v2
         with: 
+            name: IceLinux-Aarch32
             path: icelinux_aarch32/iso/*.iso
             if-no-files-found: ignore #warn #error
-##########################################################################
-      - name: Cleaning Actions Build Work
-        run: |
-          sudo rm -r icelinux_x86_64/iso icelinux_x86_64/work 
-          sudo rm -r icelinux_x86/iso icelinux_x86/work 
-          sudo rm -r icelinux_aarch64/iso icelinux_aarch64/work 
-          sudo rm -r icelinux_aarch32/iso icelinux_aarch32/work
 ##########################################################################

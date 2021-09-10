@@ -2,11 +2,11 @@
 # shellcheck disable=SC2034
 
 iso_name="icelinux"
-iso_label="ICELINUX_$(date +%Y%m)"
+iso_label="NEKO_$(date +%Y%m)"
 iso_publisher="IceLinux <https://github.com/NekoIceTeam/IceLinux>"
 iso_application="Ice Linux Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"
-install_dir="arch"
+install_dir="icelinux"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')
 arch="x86_64"

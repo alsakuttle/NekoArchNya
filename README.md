@@ -1,7 +1,7 @@
 <h1 align="center">IceLinux</h1>
 
 <div align="center">
-	<a href="https://github.com/NekoIceTeam/Ice-Linux/actions">
+	<a href="https://github.com/NekoIceTeam/IceLinux/actions">
 		<img src="https://github.com/NekoIceTeam/IceLinux/actions/workflows/build-ci.yml/badge.svg" alt="Build CI" />
 	</a>
 </div>
@@ -15,7 +15,7 @@
 - [License](https://github.com/NekoIceCream/IceLinux/blob/main/LICENSE.md)
 
 ## Introduction
-IceLinux is a Linux With Arch Based created by NekoIceCream written in Bash And Python , this bot was created for fun and learning on developing with Bash And Python.
+IceLinux is a Linux With Arch Based created by NekoIceCream written in Bash, this bot was created for fun and learning on developing with Bash.
 
 ## Installation
 1. Run Installer Use Command

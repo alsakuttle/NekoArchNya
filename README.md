@@ -1,7 +1,7 @@
 <h1 align="center">IceLinux</h1>
 
 <div align="center">
-	<a href="https://github.com/NekoIceTeam/IceLinux/actions">
+	<a href="https://github.com/NekoIceTeam/IceLinux/actions
 		<img src="https://github.com/NekoIceTeam/IceLinux/actions/workflows/build-ci.yml/badge.svg" alt="Build CI" />
 	</a>
 </div>

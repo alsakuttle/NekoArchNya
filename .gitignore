@@ -4,8 +4,16 @@
 .idea/
 ##########################################################################
 # BUILD DIRECTORY
-icelinux_x86_64/iso/
-icelinux_x86_64/work/
+icelinux_x86_64/build/
+icelinux_x86/build/
+icelinux_aarch64/build/
+icelinux_aarch32/build/
+##########################################################################
+# OUT DIRECTORY
+icelinux_x86_64/out/
+icelinux_x86/out/
+icelinux_aarch64/out/
+icelinux_aarch32/out/
 ##########################################################################
 # PRIVATE
 NOTE.md

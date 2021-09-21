@@ -1,6 +1,9 @@
 #!/bin/bash
 # Your Only Can Build On Arch Based System
 
+
+BUILD_DIR='icelinux_x86_64/build'
+OUT_DIR='icelinux_x86_64/out'
 clear
 echo "==================================="
 echo "       IceLinux Build Script       "
@@ -22,9 +25,21 @@ echo "Starting Building..."
 echo "Ctrl + For Cancel"
 sleep 10
 
+if [ -d $OUT_DIR ]
+then
+else
+mkdir $OUT_DIR
+fi
+
+if [ -d $BUILD_DIR ]
+then
+else
+mkdir $BUILD_DIR
+fi
+
+
 sudo pacman -Syyyu --noconfirm
 sudo pacman -S archiso --noconfirm
-mkdir icelinux_x86_64/iso icelinux_x86_64/work
-# mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w icelinux_x86_64/work -o icelinux_x86_64/iso icelinux_x86_64/
-mkarchiso -v -w icelinux_x86_64/work -o icelinux_x86_64/iso icelinux_x86_64
+# mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64/
+mkarchiso -v -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64
 # Copyright (c) 2021 NekoIceCream

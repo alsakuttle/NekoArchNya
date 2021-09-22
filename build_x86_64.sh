@@ -27,12 +27,14 @@ sleep 10
 
 if [ -d $OUT_DIR ]
 then
+sleep 1
 else
 mkdir $OUT_DIR
 fi
 
 if [ -d $BUILD_DIR ]
 then
+sleep 1
 else
 mkdir $BUILD_DIR
 fi

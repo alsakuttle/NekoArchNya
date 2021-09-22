@@ -7,8 +7,9 @@ on:
 
 jobs:
   build:
+    test-run:
     runs-on: ubuntu-latest
-      container:
+    container:
       image: archlinux
       options: --privileged
       volumes:

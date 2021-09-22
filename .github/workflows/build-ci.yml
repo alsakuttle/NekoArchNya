@@ -37,12 +37,12 @@ jobs:
 #           chmod +x build_aarch32.sh
 #           sudo bash build_aarch32.sh
 ##########################################################################
-#      - name: Upload Ice Linux x86_64 Iso
-#        uses: actions/upload-artifact@v2
-#        with:
-#           name: IceLinux-x86_64
-#            path: icelinux_x86_64/out/*
-#            if-no-files-found: warn #error #igrone  
+      - name: Upload Ice Linux x86_64 Iso
+        uses: actions/upload-artifact@v2
+        with:
+           name: IceLinux-x86_64
+            path: icelinux_x86_64/out/*
+            if-no-files-found: warn #error #igrone  
 ##########################################################################
 #      - name: Upload Ice Linux x86 Iso
 #        uses: actions/upload-artifact@v2

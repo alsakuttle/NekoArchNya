@@ -19,7 +19,7 @@ jobs:
 ##########################################################################
       - name: Build Ice Linux For x86_64
         run: |
-          pacman -Syyyu sudo archiso
+          pacman -Syyyu sudo archiso --noconfirm
           chmod +x build_x86_64.sh
           sudo bash build_x86_64.sh
 ##########################################################################

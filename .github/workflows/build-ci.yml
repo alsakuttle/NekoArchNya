@@ -24,8 +24,8 @@ jobs:
           sudo bash build_x86_64.sh
       
       - name: Upload Ice Linux x86_64 Iso
-         uses: actions/upload-artifact@v2
-         with:
-             name: IceLinux-x86_64
-             path: icelinux_x86_64/out/*
-             if-no-files-found: error
+        uses: actions/upload-artifact@v2
+        with:
+            name: IceLinux-x86_64
+            path: icelinux_x86_64/out/*
+            if-no-files-found: error

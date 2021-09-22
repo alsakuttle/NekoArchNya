@@ -7,7 +7,12 @@ on:
 
 jobs:
   build:
-    runs-on: ArchLinux
+    runs-on: ubuntu-latest
+      container:
+      image: archlinux
+      options: --privileged
+      volumes:
+        - /sys/fs/cgroup:/sys/fs/cgroup
 
     steps:
       - uses: actions/checkout@v2

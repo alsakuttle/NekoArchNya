@@ -1,5 +1,5 @@
 ##########################################################################
-name: Build CI
+name: Build CI (x86_64)
 
 on:
   pull_request:
@@ -22,47 +22,10 @@ jobs:
           pacman -Syyyu sudo archiso --noconfirm
           chmod +x build_x86_64.sh
           sudo bash build_x86_64.sh
-##########################################################################
-#      -  name: Build Ice Linux For x86
-#         run: | 
-#           chmod +x build_x86.sh
-#           sudo bash build_x86.sh
-##########################################################################
-#      -  name: Build Ice Linux For Aarch64
-#         run: | 
-#           chmod +x build_aarch64.sh
-#           sudo bash build_aarch64.sh
-##########################################################################
-#      -  name: Build Ice Linux For Aarch32
-#         run: | 
-#           chmod +x build_aarch32.sh
-#           sudo bash build_aarch32.sh
-##########################################################################
-       - name: Upload Ice Linux x86_64 Iso
+      
+      - name: Upload Ice Linux x86_64 Iso
          uses: actions/upload-artifact@v2
          with:
              name: IceLinux-x86_64
              path: icelinux_x86_64/out/*
              if-no-files-found: error
-##########################################################################
-#      - name: Upload Ice Linux x86 Iso
-#        uses: actions/upload-artifact@v2
-#        with: 
-#            name: IceLinux-x86
-#            path: icelinux_x86/out/*
-#            if-no-files-found: ignore #error #warn
-##########################################################################
-#      - name: Upload Ice Linux Aarch64 Iso
-#        uses: actions/upload-artifact@v2
-#        with: 
-#            name: IceLinux-Aarch64
-#            path: icelinux_aarch64/out/*
-#            if-no-files-found: ignore #warn #error
-##########################################################################
-#      - name: Upload Ice Linux Aarch32 Iso
-#        uses: actions/upload-artifact@v2
-#        with: 
-#            name: IceLinux-Aarch32
-#            path: icelinux_aarch32/out/*
-#            if-no-files-found: ignore #warn #error
-##########################################################################

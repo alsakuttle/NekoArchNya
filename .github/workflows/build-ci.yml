@@ -17,9 +17,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 ##########################################################################
+      - name: Setup BlackArch Repo
+        run: |
+          pacman -Syyyu sudo wget archiso --noconfirm
+          wget https://www.blackarch.org/strap.sh
+          chmod +x strap.sh
+          sudo strap.sh
+	  pacman -Sy
+
+
       - name: Build Ice Linux For x86_64
         run: |
-          pacman -Syyyu sudo archiso --noconfirm
           chmod +x build_x86_64.sh
           sudo bash build_x86_64.sh
       

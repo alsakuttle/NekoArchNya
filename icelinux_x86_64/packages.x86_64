@@ -6,7 +6,7 @@ archlinux-keyring
 b43-fwcutter
 base
 bind-tools
-#blackarch-keyring
+blackarch-keyring
 brltty
 broadcom-wl
 btrfs-progs

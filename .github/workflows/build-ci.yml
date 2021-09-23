@@ -22,7 +22,7 @@ jobs:
           pacman -Syyyu sudo wget archiso --noconfirm
           wget https://www.blackarch.org/strap.sh
           chmod +x strap.sh
-          sudo strap.sh
+          sudo bash strap.sh
 
       - name: Build Ice Linux For x86_64
         run: |

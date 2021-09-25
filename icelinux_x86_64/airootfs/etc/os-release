@@ -1,0 +1,7 @@
+NAME="IceLinux"
+ID=icelinux
+PRETTY_NAME="IceLinux"
+ANSI_COLOR="1;35"
+HOME_URL="https://github.com/NekoIceTeam/IceLinux/"
+SUPPORT_URL="https://github.com/NekoIceTeam/IceLinux/"
+BUG_REPORT_URL="https://github.com/NekoIceTeam/IceLinux/"

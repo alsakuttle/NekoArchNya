@@ -12,10 +12,8 @@ rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
 rm -f /root/{.automated_script.sh,.zlogin}
 rm -rf /etc/initcpio
 
-pacman -Sy --noconfirm
 pacman-key --init
 pacman-key --populate archlinux
-pacman -Fyy
 pacman-db-upgrade
 updatedb
 sync

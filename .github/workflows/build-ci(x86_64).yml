@@ -21,7 +21,7 @@ jobs:
 ##########################################################################
       - name: Import GPG
         uses: crazy-max/ghaction-import-gpg@v4.0.0
-        env:
+        with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
 

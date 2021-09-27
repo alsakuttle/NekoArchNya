@@ -2,6 +2,8 @@
 name: Build CI (x86_64)
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -17,6 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 ##########################################################################
+      - name: Import GPG
+        uses: crazy-max/ghaction-import-gpg@v4.0.0
+        env:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+
       - name: Setup BlackArch Repo
         run: |
           pacman -Syyyu sudo wget archiso --noconfirm

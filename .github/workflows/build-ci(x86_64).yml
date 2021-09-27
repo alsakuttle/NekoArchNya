@@ -23,6 +23,12 @@ jobs:
           wget https://www.blackarch.org/strap.sh
           chmod +x strap.sh
           sudo bash strap.sh
+      
+      - name: Import GPG
+        uses: crazy-max/ghaction-import-gpg@v4.0.0
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
 
       - name: Build Ice Linux For x86_64
         run: |

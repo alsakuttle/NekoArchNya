@@ -25,9 +25,8 @@ jobs:
           sudo bash strap.sh
       
       - name: Import GPG
-        id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v4.0.0
-        with:
+        env:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
 

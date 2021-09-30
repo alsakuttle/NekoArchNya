@@ -42,6 +42,6 @@ fi
 
 sudo pacman -Syyyu --noconfirm
 sudo pacman -S archiso --noconfirm
-mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64/
-#mkarchiso -v -G nekoicecream@outlook.co.id -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64
+# mkarchiso -v -g 8E02DA8285638FD2 -G nekoicecream@outlook.co.id -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64/
+mkarchiso -v -G nekoicecream@outlook.co.id -w $BUILD_DIR -o $OUT_DIR icelinux_x86_64
 # Copyright (c) 2021 NekoIceCream

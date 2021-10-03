@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -eu
+
+NET_IF=""
 dhcpcd -h noleak -i noleak -v ,noleak -I noleak -t 10 -i $NET_IF
 sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
 

@@ -1,31 +1,34 @@
 #!/bin/bash
 
+script_cmdline ()
+{
+    local param
+    for param in $(< /proc/cmdline); do
+        case "${param}" in
+            script=*) echo "${param##*=}" ; return 0 ;;
+        esac
+    done
+}
 
-set -eu
-sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
+automated_script ()
+{
+    local script rt
+    script="$(script_cmdline)"
+    if [[ -n "${script}" && ! -x /tmp/startup_script ]]; then
+        if [[ "${script}" =~ ^http:// || "${script}" =~ ^ftp:// ]]; then
+            wget "${script}" --retry-connrefused -q -O /tmp/startup_script >/dev/null
+            rt=$?
+        else
+            cp "${script}" /tmp/startup_script
+            rt=$?
+        fi
+        if [[ ${rt} -eq 0 ]]; then
+            chmod +x /tmp/startup_script
+            /tmp/startup_script
+        fi
+    fi
+}
 
-sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
-sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
-
-rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
-rm -f /root/{.automated_script.sh,.zlogin}
-rm -rf /etc/initcpio
-
-pacman-key --init
-pacman-key --populate archlinux
-pacman-db-upgrade
-updatedb
-sync
-
-if [ ! -d /root ]; 
-then
-  mkdir /root
-  chmod 700 root 
-  chown -R root:root /root
+if [[ $(tty) == "/dev/tty1" ]]; then
+    automated_script
 fi
-
-
-echo 'IceLinux' > /etc/arch-release
-
-echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf

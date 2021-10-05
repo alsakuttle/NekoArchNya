@@ -62,6 +62,7 @@ memtest86+
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
+mlocate
 modemmanager
 mtools
 nano

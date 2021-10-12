@@ -25,10 +25,19 @@ icelinux-install
 
 ## Building
 1. Fork Or Clone This Repository
-2. Build The Iso (Only For Arch Based System!) Use Commmand
+2. Build The Iso 
+
+(Host Arch Based System!) Use Commmands
+
 ```
 chmod +x build.sh
 sudo ./build.sh
+```
+
+(Host Non Arch Based System) Use Commands
+
+```
+docker build -t icelinux-build:latest .
 ```
 
 ## Current Status

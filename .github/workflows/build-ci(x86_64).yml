@@ -4,6 +4,7 @@ name: Build CI (x86_64)
 on:
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:

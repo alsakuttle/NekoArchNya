@@ -23,7 +23,7 @@ jobs:
 ##########################################################################
       - name: Install Git
         run: |
-          pacman -Syyyu git sudo --noconfirm
+          pacman -Syyyu git sudo --noconfirm && ls && cd .git && ls && cd ..
           
       - name: Import GPG
         uses: crazy-max/ghaction-import-gpg@v4.1.0

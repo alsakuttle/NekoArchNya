@@ -15,7 +15,7 @@
 - [License](https://github.com/NekoIceCream/IceLinux/blob/main/LICENSE.md)
 
 ## Introduction
-IceLinux is a Linux With Arch Based created by NekoIceCream written in Bash, this bot was created for fun and learning on developing with Bash.
+IceLinux is a Linux With Arch Based created by NekoIceCream written in Bash, this linux was created for fun and learning on developing with Bash.
 
 ## Installation
 1. Run Installer Use Command

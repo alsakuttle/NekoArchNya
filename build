@@ -1,0 +1,40 @@
+#!/bin/bash
+# Your Only Can Build On Arch Based System
+
+
+BUILD_DIR='./NekoArchNya/build'
+OUT_DIR='./NekoArchNya/out'
+clear
+echo "==================================="
+echo "       NekoArcNya Build Script       "
+echo "==================================="
+echo "- Arch : x86_64"
+echo "- Building Date : $(date +%Y.%m.%d)"
+echo "- Script Version : v3.0"
+echo ""
+echo "<https://github.com/NekoIceTeam/NekoArchNya>"
+echo "  Copyright (c) 2022 NekoIceCream  "
+echo "  Copyright (c) 2022 NekoIceTeam "
+echo "==================================="
+
+
+if [ -d $OUT_DIR ]
+then
+sleep 1
+else
+mkdir $OUT_DIR
+fi
+
+if [ -d $BUILD_DIR ]
+then
+sleep 1
+else
+mkdir $BUILD_DIR
+fi
+
+sudo pacman -Sy archiso --noconfirm --needed 
+sudo mkarchiso -v -w $BUILD_DIR -o $OUT_DIR ./NekoArchNya
+sha256sum $OUR_DIR/*.iso > nekoarchnya.sum
+
+# Copyright (c) 2022 NekoIceCream
+# Copyright (c) 2022 NekoIceTeam

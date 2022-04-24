@@ -1,0 +1,45 @@
+##########################################################################
+name: Build CI (x86_64)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux
+      options: --privileged
+      volumes:
+        - /sys/fs/cgroup:/sys/fs/cgroup
+
+    steps:
+      - uses: actions/checkout@v2
+##########################################################################
+      - name: Install Git
+        run: |
+          pacman -Sy sudo archiso --noconfirm --needed
+          
+      - name: Build NekoArchNya For x86_64
+        run: |
+          chmod +x build
+          ./build
+      
+      - name: Upload NekoArchNya x86_64 Iso
+        uses: actions/upload-artifact@v2
+        with:
+            name: NekoArchNya-x86_64
+            path: NekoArchnya/out/*.iso
+            if-no-files-found: error
+            
+      - name: Upload NekoArchNya x86_64 SHA256
+        uses: actions/upload-artifact@v2
+        with:
+            name: NekoArchNya-x86_64-256sum
+            path: NekoArchnya/out/*.sum
+            if-no-files-found: warning

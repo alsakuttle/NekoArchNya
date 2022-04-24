@@ -6,7 +6,7 @@ BUILD_DIR='./NekoArchNya/build'
 OUT_DIR='./NekoArchNya/out'
 clear
 echo "==================================="
-echo "       NekoArcNya Build Script       "
+echo "       NekoArchNya Build Script       "
 echo "==================================="
 echo "- Arch : x86_64"
 echo "- Building Date : $(date +%Y.%m.%d)"
@@ -34,7 +34,7 @@ fi
 
 sudo pacman -Sy archiso --noconfirm --needed 
 sudo mkarchiso -v -w $BUILD_DIR -o $OUT_DIR ./NekoArchNya
-sha256sum $OUR_DIR/*.iso > nekoarchnya.sum
+sha256sum NekoArchNya/out/*.iso > nekoarchnya.sum
 
 # Copyright (c) 2022 NekoIceCream
 # Copyright (c) 2022 NekoIceTeam

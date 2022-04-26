@@ -34,12 +34,12 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
             name: NekoArchNya-x86_64
-            path: NekoArchnya/out/*.iso
+            path: NekoArchNya/out/*.iso
             if-no-files-found: error
             
       - name: Upload NekoArchNya x86_64 SHA256
         uses: actions/upload-artifact@v2
         with:
             name: NekoArchNya-x86_64-256sum
-            path: NekoArchnya/out/*.sum
+            path: NekoArchNya/out/*.sum
             if-no-files-found: warning

@@ -42,4 +42,4 @@ jobs:
         with:
             name: NekoArchNya-x86_64-256sum
             path: NekoArchNya/out/*.sum
-            if-no-files-found: warning
+            if-no-files-found: warn

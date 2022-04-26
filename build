@@ -10,7 +10,7 @@ echo "       NekoArchNya Build Script       "
 echo "==================================="
 echo "- Arch : x86_64"
 echo "- Building Date : $(date +%Y.%m.%d)"
-echo "- Script Version : v3.0"
+echo "- Script Version : v3.2"
 echo ""
 echo "<https://github.com/NekoIceTeam/NekoArchNya>"
 echo "  Copyright (c) 2022 NekoIceCream  "
@@ -34,7 +34,7 @@ fi
 
 sudo pacman -Sy archiso --noconfirm --needed 
 sudo mkarchiso -v -w $BUILD_DIR -o $OUT_DIR ./NekoArchNya
-sha256sum NekoArchNya/out/*.iso > nekoarchnya.sum
+sha256sum NekoArchNya/out/nekoarchnya-$(date +%Y.%m.%d)-x86_64.iso > NekoArchNya/out/nekoarchnya-$(date +%Y.%m.%d)-x86_64.sum
 
 # Copyright (c) 2022 NekoIceCream
 # Copyright (c) 2022 NekoIceTeam

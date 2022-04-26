@@ -31,8 +31,10 @@ exfatprogs
 f2fs-tools
 fatresize
 fsarchiver
+gdm
 gnu-netcat
 git
+gnome
 gpart
 gparted
 gpm
@@ -79,6 +81,8 @@ mtools
 nano
 nbd
 ndisc6
+#nekoarchnya-calamares
+networkmanager
 nfs-utils
 nilfs-utils
 nmap
@@ -136,7 +140,7 @@ xf86-video-ati
 xf86-video-intel
 xf86-video-nouveau
 xl2tpd
-xorg 
+xorg
 xorg-server
 zsh
 

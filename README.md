@@ -1,27 +1,21 @@
 <h1 align="center">IceLinux</h1>
 
 <div align="center">
-	<a href="https://github.com/NekoIceTeam/IceLinux/actions
-		<img src="https://github.com/NekoIceTeam/IceLinux/actions/workflows/build-ci.yml/badge.svg" alt="Build CI" />
+	<a href="https://github.com/NekoIceTeam/NekoArchNya/actions
+		<img src="https://github.com/NekoIceTeam/NekoArchNya/actions/workflows/build-ci.yml/badge.svg" alt="Build CI" />
 	</a>
 </div>
 
 ## Navigation
 - [Introduction](#introduction)
-- [Installation](#installation)
 - [Building](#building)
 - [Current Status](#Current-Status)
 - [Plan](#Plan)
-- [License](https://github.com/NekoIceCream/IceLinux/blob/main/LICENSE.md)
+- [License](https://github.com/NekoIceTeam/NekoArchNya/blob/main/LICENSE.md)
 
 ## Introduction
-IceLinux is a Linux With Arch Based created by NekoIceCream written in Bash, this linux was created for fun and learning on developing with Bash.
+NekoIceNya Made With Archiso.
 
-## Installation
-1. Run Installer Use Command
-```
-icelinux-install
-```
 
 ## Building
 1. Fork Or Clone This Repository
@@ -29,19 +23,14 @@ icelinux-install
 
 (Host Arch Based System!) Use Commmands
 
+`	`
+chmod +x build
+sudo ./build
 ```
-chmod +x build.sh
-sudo ./build.sh
-```
-
-(Host Non Arch Based System) Use Commands
-
-```
-docker build -t icelinux-build:latest .
 ```
 
 ## Current Status
--
+- Still In Development!
 
 ## Plan
 1. Make A Installer
